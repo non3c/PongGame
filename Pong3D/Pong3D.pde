@@ -1,6 +1,6 @@
-final int INTRO = 0;
-final int GAME = 1;
-final int PAUSE = 2 ;
+final int INTRO    = 0;
+final int GAME     = 1;
+final int PAUSE    = 2;
 final int GAMEOVER = 3;
 
 int mode = 1;

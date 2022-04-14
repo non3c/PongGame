@@ -1,6 +1,8 @@
 class GameObject {
   //variables
   PVector pos;
+  int size;
+  int sizeX, sizeY, sizeZ;
 
   GameObject() {
     

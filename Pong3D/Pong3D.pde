@@ -5,9 +5,16 @@ final int GAMEOVER = 3;
 
 int mode = 1;
 
+ArrayList<GameObject> GameObjects;
+
+
 void setup() {
   fullScreen(P3D);
   frameRate(60);
+  
+  GameObjects = new ArrayList<GameObject>();
+  GameObjects.add(new Walls());
+  GameObjects.add(new Balls());
 }
 
 void draw() {

@@ -1,6 +1,7 @@
 class GameObject {
   //variables
   PVector pos;
+  PVector vel;
   int size;
   int sizeX, sizeY, sizeZ;
 
@@ -12,6 +13,7 @@ class GameObject {
   }
 
   void act() {
-    //add veposity to position
+    //add velosity to position
+    pos.add(vel);
   }
 }

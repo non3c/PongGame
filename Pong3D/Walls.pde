@@ -5,7 +5,6 @@ class Walls extends GameObject {
     sizeX = 50;
     sizeY = 250;
     sizeZ = 50;
-    
   }
 
   void show() {
@@ -26,14 +25,20 @@ class Walls extends GameObject {
 
   void act() {
     if (upkeyP1) {
-      p1Y -= 5;
+      p1Y -= height/200;
     } else if (downkeyP1) {
-      p1Y += 5;
+      p1Y += height/200;
     }
     if (upkeyP2) {
-      p2Y -= 5;
+      p2Y -= height/200;
     } else if (downkeyP2) {
-      p2Y += 5;
+      p2Y += height/200;
     }
+    
+    if (p1Y >= height-125) p1Y = height-125;
+    if (p1Y <= 125) p1Y = 125;
+
+    if (p2Y >= height-125) p2Y = height-125;
+    if (p2Y <= 125) p2Y = 125;
   }
 }

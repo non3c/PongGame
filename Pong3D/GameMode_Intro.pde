@@ -1,3 +1,0 @@
-void intro() {
-  background(#FFFFFF);
-}

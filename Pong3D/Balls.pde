@@ -1,6 +1,7 @@
 class Balls extends GameObject {
   Balls() {
-    pos = new PVector(width/2, height/2, 50);
+    pos = new PVector(width/2, height/2, 0);
+    vel = new PVector(2, 0, 0);
     size = 15;
   }
 
@@ -15,9 +16,17 @@ class Balls extends GameObject {
   }
 
   void act() {
-    vel = new PVector(1, 1);
-    super.act();
 
+    super.act();
     println(vel);
+  }
+
+  void collision() {
+    if (pos.y >= height-2*size) vel.y = -vel.y;
+    if (pos.y <= 2*size) vel.y = -vel.y;
+    //if () <= size/2 + myWalls.sizeZ) {
+    //  vel.x = -vel.x;
+    //  vel.y = -vel.y;
+    //}
   }
 }

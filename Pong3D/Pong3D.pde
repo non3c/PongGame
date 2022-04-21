@@ -8,15 +8,15 @@ final int GAMEOVER = 3;
 
 int mode = 1;
 
+Walls myWalls;
 ArrayList<GameObject> GameObjects;
 
 
 void setup() {
   fullScreen(P3D);
   frameRate(60);
-
+  myWalls = new Walls();
   GameObjects = new ArrayList<GameObject>();
-  GameObjects.add(new Walls());
   GameObjects.add(new Balls());
 }
 

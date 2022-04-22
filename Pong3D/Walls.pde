@@ -37,6 +37,8 @@ class Walls extends GameObject {
 
     p1Y = min(max(125, p1Y), height-125);
     p2Y = min(max(125, p2Y), height-125);
+    p1Z = min(max(-250, p1Z), 0);
+    p2Z = min(max(-250, p2Z), 0);
   }
 
   void movement() {
@@ -47,7 +49,7 @@ class Walls extends GameObject {
 
     if (upkeyP2)    p2Y -= 3;
     if (downkeyP2)  p2Y += 3;
-    if (rightkeyP2) p2Z -= 3;
-    if (leftkeyP2)  p2Z += 3;
+    if (rightkeyP2) p2Z += 3;
+    if (leftkeyP2)  p2Z -= 3;
   }
 }

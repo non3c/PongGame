@@ -15,6 +15,9 @@ ArrayList<GameObject> GameObjects;
 void setup() {
   fullScreen(P3D);
   frameRate(60);
+  textureMode(NORMAL);
+  bg = loadImage("GoldBlock.png");
+  
   myWalls = new Walls();
   GameObjects = new ArrayList<GameObject>();
   GameObjects.add(new Balls());

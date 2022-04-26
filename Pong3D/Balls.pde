@@ -1,7 +1,7 @@
 class Balls extends GameObject {
   Balls() {
     pos = new PVector(width/2, height/2, 0);
-    vel = new PVector(2, 0, 0);
+    vel = new PVector(2, 2, 0);
     size = 15;
   }
 
@@ -18,7 +18,7 @@ class Balls extends GameObject {
   void act() {
 
     super.act();
-    println(vel);
+    collision();
   }
 
   void collision() {

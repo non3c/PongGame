@@ -9,6 +9,7 @@ void game() {
   //drawRoom();
   drawGameObjects();
   drawFloor();
+  
   //countdown();
 }
 void drawGameObjects() {
@@ -24,8 +25,8 @@ void drawGameObjects() {
 
 void drawRoom() {
   pushMatrix();
-  translate(100, 100, -500);
-  scale(600);
+  translate(200, 200, -500);
+  scale(400);
   noStroke();
 
   loadRoom();
@@ -34,6 +35,7 @@ void drawRoom() {
 
 void loadRoom() {
   pushMatrix();
+  shapeMode(CENTER);
   translate(0, 0, 0);
   scale(1);
   noStroke();

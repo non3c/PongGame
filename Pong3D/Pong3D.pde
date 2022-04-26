@@ -1,5 +1,5 @@
-import com.dhchoi.CountdownTimer;
-import com.dhchoi.CountdownTimerService;
+//import com.dhchoi.CountdownTimer;
+//import com.dhchoi.CountdownTimerService;
 
 final int INTRO    = 0;
 final int GAME     = 1;
@@ -16,7 +16,7 @@ void setup() {
   fullScreen(P3D);
   frameRate(60);
   textureMode(NORMAL);
-  bg = loadImage("GoldBlock.png");
+  bg = loadImage("testbackground.jpg");
   
   myWalls = new Walls();
   GameObjects = new ArrayList<GameObject>();

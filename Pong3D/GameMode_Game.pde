@@ -4,17 +4,21 @@
 //int elapsedTime = 0;
 PImage bg;
 
+
 void game() {
+  camera(width/2, height/2-myBall.pos.y/2, width/2, myBall.pos.x, myBall.pos.y, 10, 0, 0.5, 0);
   background(#000000);
   //drawRoom();
   drawGameObjects();
   drawFloor();
-  
+
   //countdown();
 }
 void drawGameObjects() {
   myWalls.show();
   myWalls.act();
+  myBall.show();
+  myBall.act();
   for (int i = 0; i < GameObjects.size(); i ++) {
     GameObject obj = GameObjects.get(i);
     obj.show();

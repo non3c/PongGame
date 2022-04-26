@@ -9,18 +9,20 @@ final int GAMEOVER = 3;
 int mode = 1;
 
 Walls myWalls;
+Balls myBall;
 ArrayList<GameObject> GameObjects;
-
 
 void setup() {
   fullScreen(P3D);
   frameRate(60);
   textureMode(NORMAL);
   bg = loadImage("testbackground.jpg");
-  
+
+
   myWalls = new Walls();
+  myBall = new Balls();
   GameObjects = new ArrayList<GameObject>();
-  GameObjects.add(new Balls());
+  
 }
 
 void draw() {

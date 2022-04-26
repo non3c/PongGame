@@ -11,7 +11,7 @@ class Walls extends GameObject {
     p2Z = 0;
     sizeX = 50;
     sizeY = 250;
-    sizeZ = 50;
+    sizeZ = 125;
   }
 
   void show() {

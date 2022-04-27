@@ -6,7 +6,7 @@ PImage bg;
 
 
 void game() {
-  camera(width/2, height/2-myBall.pos.y/2, width/2, myBall.pos.x, myBall.pos.y, 10, 0, 0.5, 0);
+  camera(width/2, height/2, width/2+myBall.pos.z/2, myBall.pos.x, myBall.pos.y, 10, 0, 0.5, 0);
   background(#000000);
   //drawRoom();
   drawGameObjects();
@@ -84,9 +84,9 @@ void loadRoom() {
 
 void drawFloor() {
   stroke(255);
-  for (int x = -2000; x <= 2000; x += 100) {
-    line(x, height, -2000, x, height, 2000);
-    line(-2000, height, x, 2000, height, x);
+  for (int x = -2000; x <= 3000; x += 100) {
+    line(x, height, -2000, x, height, 3000);
+    line(-2000, height, x, 3000, height, x);
   }
 }
 

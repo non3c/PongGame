@@ -1,3 +1,5 @@
+import at.mukprojects.console.*;
+
 //import com.dhchoi.CountdownTimer;
 //import com.dhchoi.CountdownTimerService;
 

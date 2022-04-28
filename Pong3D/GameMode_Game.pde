@@ -3,15 +3,17 @@
 //String timeText = "";
 //int elapsedTime = 0;
 PImage bg;
+float speedCoefficient = 1;
 
 
 void game() {
-  camera(width/2, height/2, width/2+myBall.pos.z/2, myBall.pos.x, myBall.pos.y, 10, 0, 0.5, 0);
+  camera(width/2, height/2, width/2+myBall.pos.z/1.3, myBall.pos.x, myBall.pos.y, 10, 0, 0.5, 0);
   background(#000000);
   //drawRoom();
   drawGameObjects();
   drawFloor();
-
+  speedupGame();
+  gameoverDetection();
   //countdown();
 }
 void drawGameObjects() {
@@ -90,6 +92,17 @@ void drawFloor() {
   }
 }
 
+void speedupGame() {
+  speedCoefficient += 0.0000001;
+}
+
+void gameoverDetection() {
+  if (myBall.pos.x >= width/2+width/1.4) {
+    mode = 3;
+  } else if (myBall.pos.x <= width/2-width/1.4) {
+    mode = 3;
+  }
+}
 //void countdown() {
 //  countdownTimer = CountdownTimerService.getNewCountdownTimer(this).configure(1000, 3000).start();
 //  text(timeText, width/2, height/2);

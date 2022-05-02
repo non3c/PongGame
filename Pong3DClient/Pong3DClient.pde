@@ -1,5 +1,5 @@
 import at.mukprojects.console.*;
-
+import processing.net.*;
 //import com.dhchoi.CountdownTimer;
 //import com.dhchoi.CountdownTimerService;
 
@@ -8,6 +8,7 @@ final int GAME     = 1;
 final int PAUSE    = 2;
 final int GAMEOVER = 3;
 
+Client myClient;
 int mode = 1;
 
 Walls myWalls;
@@ -18,6 +19,7 @@ void setup() {
   fullScreen(P3D);
   frameRate(60);
   textureMode(NORMAL);
+  myClient = new Client(this, "127.0.0.1", 50000);
   bg = loadImage("testbackground.jpg");
 
 
